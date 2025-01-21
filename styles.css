@@ -253,7 +253,121 @@ body {
   cursor: pointer;
   margin: 0 10px;
 }
+.our-stories {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffe0b2), url('assets/bg.png');
+  background-size: cover;
+  background-position: center; 
+}
+.our-stories h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
 
+.stories-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.large-card {
+  display: flex;
+  position: relative;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.large-card img {
+  width: 100%;
+  height: auto;
+}
+
+.story-content {
+  padding: 15px;
+}
+.story-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.story-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.small-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.story-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card img {
+  width: 100%;
+  height: auto;
+}
+
+.story-card:hover {
+  transform: scale(1.03);
+}
+.image-container {
+  position: relative;
+  overflow: visible; 
+  border-radius: 10px; 
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+.story-date {
+  position: absolute;
+  bottom: -10px; 
+  left: 32%; 
+  transform: translateX(-50%); 
+  background-color: #00bcd4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; 
+}
+.view-all-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.view-all-btn:hover {
+  background: #333;
+}
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -324,5 +438,21 @@ body {
 
   .navigation {
     margin-top: 20px;
+  }
+  .stories-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .large-card {
+    display: none; 
+  }
+
+  .small-cards {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+
+  .story-card {
+    margin: 0 auto; 
   }
 }
